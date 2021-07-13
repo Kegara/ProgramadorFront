@@ -1,189 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link href="../Feria/css/bootstrap.min.css" rel="stylesheet" />
     <!-- MDB -->
-    <!-- mdb ajax -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
-    <!-- mdb ajax -->
-    <!-- jsMain -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script>
-        function smoothScrollingTo(target){
-    $('html,body').animate({scrollTop:$(target).offset().top}, 5000);
-  }
-  $('a[href*=\\#]').on('click', function(event){     
-      event.preventDefault();
-      smoothScrollingTo(this.hash);
-  });
-  $(document).ready(function(){
-    smoothScrollingTo(location.hash);
-  });
-    </script>
-    <!-- jsMain -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/main.css" rel="stylesheet" />
+      <!-- jsMain -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- jsMain -->
     <title>Programadores web</title>
 </head>
 
 <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
+    <!-- header de la pagina -->
     <header class="bg-info text-center text-white mb-5" id="header">
-        <h1>Programadores web</h1>
+        <h1 class="pb-1">Programadores web</h1>
     </header>
-    <!-- Here is our page's main content -->
-    <main class=" px-3 mx-auto" id="main">
+    <!-- header de la pagina -->
+    <!-- contenido main -->
+    <main class="px-3 mx-auto" id="main">
         <div class="row">
-            <div class="col-3">
-                <!-- menu lateral -->
+            <!-- menu lateral -->
+            <div class="col-sm-3 col-m-12 pb-2">
                 <ul class="nav flex-column nav-pills menu-sidebar" id="sidepanel">
                     <li class="text-center nav-item">
                         <img src="https://image.freepik.com/vector-gratis/ilustracion-colorida-programador-trabajando_23-2148281410.jpg"
-                            class="img-thumbnail mw-100 img_tab ">
+                            class="img-thumbnail mw-100 img_tab" />
                     </li>
                     <!--Frontend -->
-                    <li class="nav-item  ">
-                        <a class="nav-link active" href="#example-1">Frontend</a>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#Frontend" id="m-front"
+                            onclick="actualizarmenu('m-front')">Frontend</a>
                         <ul class="nav flex-column ps-3">
                             <li class="nav-item tab">
-                                <a class="nav-link" href="#example-1">Diseñador UI/UX</a>
+                                <a class="nav-link" href="#Frontend" id="m-front-1"
+                                    onclick="actualizarmenu('m-front-1')">Diseñador UI/UX</a>
                             </li>
                             <li class="nav-item tab">
-                                <a class="nav-link" href="#example-2">Maquetador</a>
+                                <a class="nav-link" href="#Maquetador" id="m-front-2"
+                                    onclick="actualizarmenu('m-front-2')">Maquetador</a>
                             </li>
                             <li class="nav-item tab">
-                                <a class="nav-link" href="#example-3">Programador frontend</a>
+                                <a class="nav-link" href="#Programador-frontend" id="m-front-3"
+                                    onclick="actualizarmenu('m-front-3')">Programador frontend</a>
                             </li>
                         </ul>
                     </li>
                     <!-- Frontend -->
+                    <br />
                     <!-- Backend -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#example-4">Backend</a>
+                        <a class="nav-link" href="#Backend" id="m-back" onclick="actualizarmenu('m-back')">Backend</a>
                         <ul class="nav flex-column ps-3">
                             <li class="nav-item tab">
-                                <a class="nav-link" href="#example-4">Programador Backend</a>
+                                <a class="nav-link" href="#Backend" id="m-back-1"
+                                    onclick="actualizarmenu('m-back-1')">Programador Backend</a>
                             </li>
                             <li class="nav-item tab">
-                                <a class="nav-link" href="#example-5">Administrador base de datos</a>
+                                <a class="nav-link" href="#Administrador-base-de-datos" id="m-back-2"
+                                    onclick="actualizarmenu('m-back-2')">Administrador base de datos</a>
                             </li>
                             <li class="nav-item tab">
-                                <a class="nav-link" href="#example-6">Programador cloud computer</a>
+                                <a class="nav-link" href="#Programador-cloud-computer" id="m-back-3"
+                                    onclick="actualizarmenu('m-back-3')">Programador cloud computer</a>
                             </li>
                         </ul>
                     </li>
                     <!-- Backend -->
+                    <br>
+                    <li>
+                        <a class="nav-link" href="#Referencias" id="m-Referencias"
+                            onclick="actualizarmenu('m-Referencias')">Referencias</a>
+                    </li>
                 </ul>
-                <!-- menu lateral -->
             </div>
-            <div class="col-9" id="content">
-                <!-- Spied element -->
-                <div data-mdb-spy="scroll" data-mdb-target="#scrollspy1" data-mdb-offset="0" class="scrollspy-example">
-                    <section id="example-1">
-                        <h3 class="h3">Diseñador UI/UX<span class="lead fst-italic"> Este rol es el encargado de diseñar
-                                las pantallas del website</span></h3>
+            <!-- menu lateral -->
+            <!-- contenido derecho -->
+            <div class="col-sm-9 col-m-12" id="content">
+                <div>
+                    <!-- Diseñador UI/UX -->
+                    <section id="Frontend">
+                        <h3 class="h3">
+                            Diseñador UI/UX<span class="lead fst-italic">
+                                Este rol es el encargado de diseñar las pantallas del
+                                website</span>
+                        </h3>
                         <article class="row">
-
                             <div class="col-8">
                                 <section>
-                                    <h2 class="h2">¿Qué es Diseño UX/UI y qué hace un Diseñador UX/UI?</h2>
+                                    <h2 class="h2">
+                                        ¿Qué es Diseño UX/UI y qué hace un Diseñador UX/UI?
+                                    </h2>
                                     <p class="my-1">
-                                        El profesional que se encargue del UI se centrará en el diseño del producto,
-                                        impactando en la primera impresión visual del usuario, algo que determina si
-                                        nuestra web o aplicación es de su gusto, mientras que el encargado del UX se
-                                        orienta en la usabilidad y facilidad de navegación, creando unas emociones y
-                                        sensaciones determinadas al hacer uso de la interfaz. Otra forma de decirlo: el
-                                        diseñador UI se encarga principalmente del aspecto visual de la interfaz,
-                                        mientras que el UX se centra en garantizar que la navegación y acciones que
-                                        realiza el usuario tengan coherencia el UI se encarga de decidir el recorrido
-                                        del usuario mientras que el UX se centra en los procesos y acciones
-                                        desencadenantes del uso.</p>
+                                        El profesional que se encargue del UI se centrará en el
+                                        diseño del producto, impactando en la primera impresión
+                                        visual del usuario, algo que determina si nuestra web o
+                                        aplicación es de su gusto, mientras que el encargado del
+                                        UX se orienta en la usabilidad y facilidad de navegación,
+                                        creando unas emociones y sensaciones determinadas al hacer
+                                        uso de la interfaz. Otra forma de decirlo: el diseñador UI
+                                        se encarga principalmente del aspecto visual de la
+                                        interfaz, mientras que el UX se centra en garantizar que
+                                        la navegación y acciones que realiza el usuario tengan
+                                        coherencia el UI se encarga de decidir el recorrido del
+                                        usuario mientras que el UX se centra en los procesos y
+                                        acciones desencadenantes del uso.
+                                    </p>
                                 </section>
                             </div>
                             <div class="col-3 text-center m-auto">
-                                <img src="img/MockFlow.gif" class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                <img src="img/MockFlow.gif" class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Uso de herramientas de maquetado</span>
                                 </div>
                             </div>
                         </article>
-                        <h4> Conocimientos requeridos para ser un buen diseñador web </h4>
+                        <h4>Conocimientos requeridos para ser un buen diseñador web</h4>
                         <article class="row m-2">
                             <div class="col 4">
                                 <img src="https://crehana-blog.imgix.net/media/filer_public/67/61/676100f8-5274-4e39-9749-475e090a5f0c/ux-design-gif.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en diseño de pantallas</span>
                                 </div>
                             </div>
                             <div class="col 4">
                                 <img src="https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en interaccionabilidad del usuario</span>
                                 </div>
                             </div>
                             <div class="col 4 m-auto">
                                 <img src="https://i.pinimg.com/originals/5c/64/84/5c6484d8ea4444bcf6cc286f4348790d.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center m-auto">
                                     <span>Uso de programas de diseño</span>
                                 </div>
                             </div>
                         </article>
                     </section>
-                    <section id="example-2">
+                    <!-- Diseñador UI/UX -->
+                    <!-- Maquetador-->
+                    <section id="Maquetador">
                         <!--Titulo -->
-                        <h3>Maquetador<span class="lead fst-italic"> Este rol es el encargado de llevar el diseño a
-                                código HTML y CSS</span></h3>
+                        <h3>
+                            Maquetador<span class="lead fst-italic">
+                                Este rol es el encargado de llevar el diseño a código HTML y
+                                CSS</span>
+                        </h3>
                         <!--Titulo -->
                         <!--conteindo -->
                         <article class="row">
-
                             <div class="col-8">
                                 <section>
-                                    <h2 class="h2">¿Qué es y que áreas domina un maquetador web?</h2>
+                                    <h2 class="h2">
+                                        ¿Qué es y que áreas domina un maquetador web?
+                                    </h2>
                                     <p class="my-1">
-                                        El maquetador web es un ingeniero informático especializado en traducir el
-                                        diseño gráfico a HTML5 y a lenguaje de estilos CSS3 con el objetivo que los
-                                        navegadores web (Chrome, Firefox…) interpreten correctamente todos los elementos
-                                        y muestren al usuario el diseño propuesto por el diseñador gráfico.
-
-                                        Por otro lado la maquetación también es la encargada de dotar de funciones a
-                                        cada elemento de interacción que dispondrán los usuarios. Esta parte se
-                                        desarrollará con código JavaScript y será la encargada de las funciones
-                                        front-end dejando a un lado la parte de código de servidor e interacción con la
-                                        base de datos la que llamamos lógica de back-end y webservices que programaran
-                                        los informáticos especializados en RoR y/o Php.
-
-                                        Actualmente, un buen maquetador web debe dominar la maquetación adaptativa y
-                                        responsiva para que un mismo código de un buen resultado tanto en pantallas de
-                                        ordenador, como en pantallas de tabletas y todo tipo de móviles. Además debe
-                                        tener altos conocimientos en interfaces de usuario (UI), usabilidad y
-                                        experiencia de usuario (UX) y controlar programas de edición gráfica como
-                                        Photoshop y Illustrator.
-
-                                        Por otro lado existen distintos frameworks como Bootstrap, Foundation, Material,
-                                        Angular, jQuery, Ext JS, React JS, Node JS y otros que pueden ayudar a
-                                        desarrollar con más celeridad ciertos proyectos y que el maquetador web debe
-                                        escoger en caso de necesidad o descartar cuando sea conveniente.</p>
+                                        El maquetador web es un ingeniero informático
+                                        especializado en traducir el diseño gráfico a HTML5 y a
+                                        lenguaje de estilos CSS3 con el objetivo que los
+                                        navegadores web (Chrome, Firefox…) interpreten
+                                        correctamente todos los elementos y muestren al usuario el
+                                        diseño propuesto por el diseñador gráfico. Por otro lado
+                                        la maquetación también es la encargada de dotar de
+                                        funciones a cada elemento de interacción que dispondrán
+                                        los usuarios. Esta parte se desarrollará con código
+                                        JavaScript y será la encargada de las funciones front-end
+                                        dejando a un lado la parte de código de servidor e
+                                        interacción con la base de datos la que llamamos lógica de
+                                        back-end y webservices que programaran los informáticos
+                                        especializados en RoR y/o Php. Actualmente, un buen
+                                        maquetador web debe dominar la maquetación adaptativa y
+                                        responsiva para que un mismo código de un buen resultado
+                                        tanto en pantallas de ordenador, como en pantallas de
+                                        tabletas y todo tipo de móviles. Además debe tener altos
+                                        conocimientos en interfaces de usuario (UI), usabilidad y
+                                        experiencia de usuario (UX) y controlar programas de
+                                        edición gráfica como Photoshop y Illustrator. Por otro
+                                        lado existen distintos frameworks como Bootstrap,
+                                        Foundation, Material, Angular, jQuery, Ext JS, React JS,
+                                        Node JS y otros que pueden ayudar a desarrollar con más
+                                        celeridad ciertos proyectos y que el maquetador web debe
+                                        escoger en caso de necesidad o descartar cuando sea
+                                        conveniente.
+                                    </p>
                                 </section>
                             </div>
                             <div class="col-3 text-center m-auto">
                                 <img src="https://parzibyte.me/blog/wp-content/uploads/2018/02/4.gif"
-                                    class="img-thumbnail mw-100  ">
+                                    class="img-thumbnail mw-100" />
                                 <div class="text-center">
                                     <span>Codificacion en HTML5</span>
                                 </div>
@@ -191,28 +209,28 @@
                         </article>
                         <!--conteindo -->
                         <!--conocimientos -->
-                        <h4> Conocimientos requeridos para ser un buen maquetador web </h4>
+                        <h4>Conocimientos requeridos para ser un buen maquetador web</h4>
                         <article class="row m-2">
                             <div class="col 4">
                                 <img src="https://crehana-blog.imgix.net/media/filer_public/67/61/676100f8-5274-4e39-9749-475e090a5f0c/ux-design-gif.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en diseño de pantallas</span>
                                 </div>
                             </div>
                             <div class="col 4">
                                 <img src="https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en interaccionabilidad del usuario</span>
                                 </div>
                             </div>
                             <div class="col 4 m-auto">
                                 <img src="https://i.pinimg.com/originals/5c/64/84/5c6484d8ea4444bcf6cc286f4348790d.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center m-auto">
                                     <span>Uso de programas de diseño</span>
                                 </div>
@@ -220,30 +238,36 @@
                         </article>
                         <!--conocimientos -->
                     </section>
-                    <section id="example-3">
-                        <h3>Programador frontend</h3>
+                    <!-- Maquetador-->
+                    <!-- Programador-frontend-->
+                    <section id="Programador-frontend">
+                        <h3>Programador frontend<span class="lead fst-italic">Agrega datos reales desde una API y lógica
+                                a la maquetación.</span></h3>
                         <!--Titulo -->
                         <!--conteindo -->
                         <article class="row">
-
                             <div class="col-8">
                                 <section>
-                                    <h2 class="h2">¿Qué es y un programador web?</h2>
+                                    <h2 class="h2">¿Qué es y que áreas domina un programador frontend?</h2>
                                     <p class="my-1">
-                                        Como el programador frontend se encarga de la parte visual, siempre viene bien
-                                        que, además de manejar estos tres lenguajes a la perfección, tenga ciertos
-                                        conocimientos sobre teorías de diseño y composición, para que así la
-                                        distribución que realice sobre los elementos de la página sea más eficaz, y de
-                                        users experience para facilitar la navegación al usuario. Y si, además, también
-                                        maneja ciertas herramientas de diseño gráfico, mejor. Aunque esto último no
-                                        siempre es necesario, ya que en muchas ocasiones las empresas ya tienen un
-                                        diseñador gráfico en plantilla con el que el programador podrá trabajar mano a
-                                        mano.</p>
+                                        Como el programador frontend se encarga de la parte
+                                        visual, siempre viene bien que, además de manejar estos
+                                        tres lenguajes a la perfección, tenga ciertos
+                                        conocimientos sobre teorías de diseño y composición, para
+                                        que así la distribución que realice sobre los elementos de
+                                        la página sea más eficaz, y de users experience para
+                                        facilitar la navegación al usuario. Y si, además, también
+                                        maneja ciertas herramientas de diseño gráfico, mejor.
+                                        Aunque esto último no siempre es necesario, ya que en
+                                        muchas ocasiones las empresas ya tienen un diseñador
+                                        gráfico en plantilla con el que el programador podrá
+                                        trabajar mano a mano.
+                                    </p>
                                 </section>
                             </div>
                             <div class="col-3 text-center m-auto">
                                 <img src="https://parzibyte.me/blog/wp-content/uploads/2018/02/4.gif"
-                                    class="img-thumbnail mw-100  ">
+                                    class="img-thumbnail mw-100" />
                                 <div class="text-center">
                                     <span>Codificacion en HTML5</span>
                                 </div>
@@ -251,70 +275,72 @@
                         </article>
                         <!--conteindo -->
                         <!--conocimientos -->
-                        <h4> Conocimientos requeridos para ser un buen maquetador web </h4>
+                        <h4>Conocimientos requeridos para ser un buen maquetador web</h4>
                         <article class="row m-2">
                             <div class="col 4">
                                 <img src="https://crehana-blog.imgix.net/media/filer_public/67/61/676100f8-5274-4e39-9749-475e090a5f0c/ux-design-gif.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en diseño de pantallas</span>
                                 </div>
                             </div>
                             <div class="col 4">
                                 <img src="https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en interaccionabilidad del usuario</span>
                                 </div>
                             </div>
                             <div class="col 4 m-auto">
                                 <img src="https://i.pinimg.com/originals/5c/64/84/5c6484d8ea4444bcf6cc286f4348790d.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center m-auto">
                                     <span>Uso de programas de diseño</span>
                                 </div>
                             </div>
                         </article>
                         <!--conocimientos -->
-
                     </section>
-                    <section id="example-4">
-                        <h3>Programador Backend</h3>
+                    <!-- Programador-frontend-->
+
+                    <!-- Backend-->
+                    <section id="Backend">
+                        <h3>Programador Backend<span class="lead fst-italic">Se encarga del código de lado del servidor
+                                y crea Apis para que el Frontend pueda consumirlas </span></h3>
                         <!--Titulo -->
                         <!--conteindo -->
                         <article class="row">
-
                             <div class="col-8">
                                 <section>
-                                    <h2 class="h2">¿Qué es y que un desarrollador backend?</h2>
+                                    <h2 class="h2">¿Qué es y que áreas domina un desarrollador backend?</h2>
                                     <p class="my-1">
-                                        Un desarrollador backend , se encarga de diseñar la lógica y las soluciones para
-                                        que todas las acciones solicitadas en una página web sean ejecutadas de manera
-                                        correcta. Trabaja del lado del servidor y procesa la información recibida a
-                                        través del frontend.
-
-
-                                        Por lo tanto, un desarrollador backend es responsable de la programación del
-                                        sitio en todos sus componentes. Podría decirse que es el que trabaja “detrás del
-                                        escenario”, permitiendo que el usuario disfrute su experiencia. Por lo que debe
-                                        asegurarse de que todo funcione de acuerdo a las interacciones que hace el
-                                        usuario. Mientras que el desarrollador frontend, se encarga de la interfaz del
-                                        sitio.
-
-
-                                        El desarrollador backend debe estudiar los diferentes lenguajes de programación
-                                        que pueden ser necesarios para desarrollar su trabajo. Debe formarse como
-                                        desarrollador de aplicaciones web o como desarrollador de aplicaciones
-                                        multiplataforma. Además necesita conocer las interacciones con diferentes bases
-                                        de datos.</p>
+                                        Un desarrollador backend , se encarga de diseñar la lógica
+                                        y las soluciones para que todas las acciones solicitadas
+                                        en una página web sean ejecutadas de manera correcta.
+                                        Trabaja del lado del servidor y procesa la información
+                                        recibida a través del frontend. Por lo tanto, un
+                                        desarrollador backend es responsable de la programación
+                                        del sitio en todos sus componentes. Podría decirse que es
+                                        el que trabaja “detrás del escenario”, permitiendo que el
+                                        usuario disfrute su experiencia. Por lo que debe
+                                        asegurarse de que todo funcione de acuerdo a las
+                                        interacciones que hace el usuario. Mientras que el
+                                        desarrollador frontend, se encarga de la interfaz del
+                                        sitio. El desarrollador backend debe estudiar los
+                                        diferentes lenguajes de programación que pueden ser
+                                        necesarios para desarrollar su trabajo. Debe formarse como
+                                        desarrollador de aplicaciones web o como desarrollador de
+                                        aplicaciones multiplataforma. Además necesita conocer las
+                                        interacciones con diferentes bases de datos.
+                                    </p>
                                 </section>
                             </div>
                             <div class="col-3 text-center m-auto">
                                 <img src="https://parzibyte.me/blog/wp-content/uploads/2018/02/4.gif"
-                                    class="img-thumbnail mw-100  ">
+                                    class="img-thumbnail mw-100" />
                                 <div class="text-center">
                                     <span>Codificacion en HTML5</span>
                                 </div>
@@ -322,28 +348,28 @@
                         </article>
                         <!--conteindo -->
                         <!--conocimientos -->
-                        <h4> Conocimientos requeridos para ser un buen maquetador web </h4>
+                        <h4>Conocimientos requeridos para ser un buen maquetador web</h4>
                         <article class="row m-2">
                             <div class="col 4">
                                 <img src="https://crehana-blog.imgix.net/media/filer_public/67/61/676100f8-5274-4e39-9749-475e090a5f0c/ux-design-gif.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en diseño de pantallas</span>
                                 </div>
                             </div>
                             <div class="col 4">
                                 <img src="https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en interaccionabilidad del usuario</span>
                                 </div>
                             </div>
                             <div class="col 4 m-auto">
                                 <img src="https://i.pinimg.com/originals/5c/64/84/5c6484d8ea4444bcf6cc286f4348790d.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center m-auto">
                                     <span>Uso de programas de diseño</span>
                                 </div>
@@ -351,28 +377,37 @@
                         </article>
                         <!--conocimientos -->
                     </section>
-                    <section id="example-5">
-                        <h3>Administrador base de datos</h3>
+                    <!-- Backend-->
+                    <!-- Administrador-base-de-datos-->
+                    <section id="Administrador-base-de-datos">
+                        <h3>Administrador base de datos <span class="lead fst-italic">Diseña, mejora, implementa y
+                                mantiene
+                                el sistema de base de datos.
+                            </span> </h3>
                         <div>
                             <!--Titulo -->
                             <!--conteindo -->
                             <article class="row">
-
                                 <div class="col-8">
                                     <section>
-                                        <h2 class="h2">¿Qué es y que áreas administrador base de datos</h2>
+                                        <h2 class="h2">
+                                            ¿Qué es y que áreas domina un administrador base de datos?
+                                        </h2>
                                         <p class="my-1">
-                                            Los administradores de bases de datos gestionan y mantienen las bases de
-                                            datos informatizadas. Se aseguran de que estas sean seguras y estén
-                                            actualizadas. Estos profesionales trabajan sobre las formas de reorganizar
-                                            las bases de datos para hacerlas más rápidas o más fáciles de usar. Crean
-                                            sistemas de respaldo para que los datos no se pierdan si surgen problemas en
-                                            la base datos.</p>
+                                            Los administradores de bases de datos gestionan y
+                                            mantienen las bases de datos informatizadas. Se aseguran
+                                            de que estas sean seguras y estén actualizadas. Estos
+                                            profesionales trabajan sobre las formas de reorganizar
+                                            las bases de datos para hacerlas más rápidas o más
+                                            fáciles de usar. Crean sistemas de respaldo para que los
+                                            datos no se pierdan si surgen problemas en la base
+                                            datos.
+                                        </p>
                                     </section>
                                 </div>
                                 <div class="col-3 text-center m-auto">
                                     <img src="https://parzibyte.me/blog/wp-content/uploads/2018/02/4.gif"
-                                        class="img-thumbnail mw-100  ">
+                                        class="img-thumbnail mw-100" />
                                     <div class="text-center">
                                         <span>Codificacion en HTML5</span>
                                     </div>
@@ -380,28 +415,30 @@
                             </article>
                             <!--conteindo -->
                             <!--conocimientos -->
-                            <h4> Conocimientos requeridos para ser un buen maquetador web </h4>
+                            <h4>
+                                Conocimientos requeridos para ser un buen maquetador web
+                            </h4>
                             <article class="row m-2">
                                 <div class="col 4">
                                     <img src="https://crehana-blog.imgix.net/media/filer_public/67/61/676100f8-5274-4e39-9749-475e090a5f0c/ux-design-gif.gif"
-                                        class="img-thumbnail mh-100  ">
-                                    <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                        class="img-thumbnail mh-100" />
+
                                     <div class="text-center">
                                         <span>Conocimiento en diseño de pantallas</span>
                                     </div>
                                 </div>
                                 <div class="col 4">
                                     <img src="https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif"
-                                        class="img-thumbnail mh-100  ">
-                                    <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                        class="img-thumbnail mh-100" />
+
                                     <div class="text-center">
                                         <span>Conocimiento en interaccionabilidad del usuario</span>
                                     </div>
                                 </div>
                                 <div class="col 4 m-auto">
                                     <img src="https://i.pinimg.com/originals/5c/64/84/5c6484d8ea4444bcf6cc286f4348790d.gif"
-                                        class="img-thumbnail mh-100  ">
-                                    <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                        class="img-thumbnail mh-100" />
+
                                     <div class="text-center m-auto">
                                         <span>Uso de programas de diseño</span>
                                     </div>
@@ -410,31 +447,37 @@
                             <!--conocimientos -->
                         </div>
                     </section>
-                    <section id="example-6">
+                    <!-- Administrador-base-de-datos-->
+                    <!-- Programador-cloud-computer-->
+                    <section id="Programador-cloud-computer">
                         <h3>Programador cloud computer</h3>
                         <!--Titulo -->
                         <!--conteindo -->
                         <article class="row">
-
                             <div class="col-8">
                                 <section>
-                                    <h2 class="h2">¿Qué es y que áreas domina un maquetador web?</h2>
+                                    <h2 class="h2">
+                                        ¿Qué es y que áreas domina un Programador cloud computer
+                                        ?
+                                    </h2>
                                     <p class="my-1">
-                                        ¿Qué es Cloud Computing? De una manera simple, la computación en la nube (cloud
-                                        computing) es una tecnología que permite acceso remoto a softwares,
-                                        almacenamiento de archivos y procesamiento de datos por medio de Internet,
-                                        siendo así, una alternativa a la ejecución en una computadora personal o
-                                        servidor local. En el modelo de nube, no hay necesidad de instalar aplicaciones
-                                        localmente en computadoras.
-
-                                        La computación en la nube ofrece a los individuos y a las empresas la capacidad
-                                        de un pool de recursos de computación con buen mantenimiento, seguro, de fácil
-                                        acceso y bajo demanda..</p>
+                                        ¿Qué es Cloud Computing? De una manera simple, la
+                                        computación en la nube (cloud computing) es una tecnología
+                                        que permite acceso remoto a softwares, almacenamiento de
+                                        archivos y procesamiento de datos por medio de Internet,
+                                        siendo así, una alternativa a la ejecución en una
+                                        computadora personal o servidor local. En el modelo de
+                                        nube, no hay necesidad de instalar aplicaciones localmente
+                                        en computadoras. La computación en la nube ofrece a los
+                                        individuos y a las empresas la capacidad de un pool de
+                                        recursos de computación con buen mantenimiento, seguro, de
+                                        fácil acceso y bajo demanda..
+                                    </p>
                                 </section>
                             </div>
                             <div class="col-3 text-center m-auto">
                                 <img src="https://parzibyte.me/blog/wp-content/uploads/2018/02/4.gif"
-                                    class="img-thumbnail mw-100  ">
+                                    class="img-thumbnail mw-100" />
                                 <div class="text-center">
                                     <span>Codificacion en HTML5</span>
                                 </div>
@@ -442,28 +485,28 @@
                         </article>
                         <!--conteindo -->
                         <!--conocimientos -->
-                        <h4> Conocimientos requeridos para ser un buen maquetador web </h4>
+                        <h4>Conocimientos requeridos para ser un buen maquetador web</h4>
                         <article class="row m-2">
                             <div class="col 4">
                                 <img src="https://crehana-blog.imgix.net/media/filer_public/67/61/676100f8-5274-4e39-9749-475e090a5f0c/ux-design-gif.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en diseño de pantallas</span>
                                 </div>
                             </div>
                             <div class="col 4">
                                 <img src="https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center">
                                     <span>Conocimiento en interaccionabilidad del usuario</span>
                                 </div>
                             </div>
                             <div class="col 4 m-auto">
                                 <img src="https://i.pinimg.com/originals/5c/64/84/5c6484d8ea4444bcf6cc286f4348790d.gif"
-                                    class="img-thumbnail mh-100  ">
-                                <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-abstracto-aplicacion-sola-pagina-pagina-web-spa-tendencia-desarrollo-web-aplicacion-dentro-navegador-pagina-reescritura-dinamica-creacion-sitio-web-receptivo_10782838.htm#page=1&query=html&position=1-->
+                                    class="img-thumbnail mh-100" />
+
                                 <div class="text-center m-auto">
                                     <span>Uso de programas de diseño</span>
                                 </div>
@@ -471,21 +514,46 @@
                         </article>
                         <!--conocimientos -->
                     </section>
+                    <!-- Programador-cloud-computer-->
+                    <section id="Referencias" class="pt-3">
+                        <h3 class="h3 ">
+                            Referencias:
+                        </h3>
+
+                        <span>
+                            Álvaro Felipe [EDteam], Los roles en frontend explicados.
+                        </span>
+                        <br>
+                        <span>
+                            Álvaro Felipe [EDteam], ¿Qué es BACKEND y FRONTEND? (guía completa).
+                        </span>
+                        <br>
+                        <span>
+                            Álvaro Felipe [EDteam], Los roles en backend explicados
+                        </span>
+
+
+                    </section>
                 </div>
-                <!-- Spied element -->
-
+                <!-- contenido derecho -->
+                <br /><br /><br /><br /><br />
             </div>
-
-
         </div>
     </main>
+    <!-- contenido main -->
     <!-- Footer -->
-    <footer class=" text-center ">
+    <footer class="text-center">
         <!-- Copyright -->
-        <div class="text-center   fw-bold">
+        <div class="text-center fw-bold">
             Sitío creado por: <a class="text-dark" href="#"> Kevin García</a>
         </div>
         <!-- Copyright -->
+    
+  
+ 
+      
+     
+
     </footer>
     <!-- Footer -->
 </body>
