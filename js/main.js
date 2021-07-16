@@ -12,7 +12,7 @@ if(opc=="#Backend")
 actualizarmenu('m-back');
 if(opc=="#Administrador-base-de-datos")
 actualizarmenu('m-back-2');
-if(opc=="#Programador-cloud-computer")
+if(opc=="#Administrador-servidor")
 actualizarmenu('m-back-3');
 
     

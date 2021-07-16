@@ -1,6 +1,7 @@
 :root{
     --mSize:81vh;
     --hSize:4vh;
+    --primary:#0dcaf0;
     --fSize:5vh;
 }
 #content{
@@ -62,4 +63,9 @@ width: 7px;
   }
   h3 span {
     padding-left: 1%;
+  }
+  .nav-link:hover {
+    color: white;
+    font-weight: bold;
+    background-color: #0dcaf0;
   }
